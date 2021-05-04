@@ -21,7 +21,6 @@ const contentTarget = document.querySelector(".businessList--newYork")
 const newYorkList = newYorkBusinesses()
 
 export const newYorkBusinessList = () => {
-    contentTarget.innerHTML = "<h2>Customers in New York State</h2>"
     newYorkList.forEach(
         (business) => {
             contentTarget.innerHTML += newYorkDisplay(business)
@@ -32,7 +31,7 @@ export const newYorkBusinessList = () => {
 const newYorkDisplay = (business) => {
     return `
         <section class="customer">
-            <h3 class="customer__type">${business.companyName}</h3>
+            <h2 class="customer__type">${business.companyName}</h2>
             <div>${business.addressFullStreet}</div>
             <div>${business.addressCity}, ${business.addressStateCode} ${business.addressZipCode}</div>
         </section>

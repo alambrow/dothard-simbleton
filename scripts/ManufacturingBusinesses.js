@@ -21,7 +21,6 @@ const contentTarget = document.querySelector(".businessList--manufacturing")
 const manuList = manufactureBusinesses()
 
 export const manuBusinessList = () => {
-    contentTarget.innerHTML = "<h2>Customers in Manufacturing</h2>"
     manuList.forEach(
         (business) => {
         contentTarget.innerHTML += manuDisplay(business)
@@ -32,7 +31,7 @@ export const manuBusinessList = () => {
 const manuDisplay = (business) => {
     return `
         <section class="customer">
-            <h3 class="customer__type">${business.companyName}</h3>
+            <h2 class="customer__type">${business.companyName}</h2>
             <div>${business.addressFullStreet}</div>
             <div>${business.addressCity}, ${business.addressStateCode} ${business.addressZipCode}</div>
         </section>

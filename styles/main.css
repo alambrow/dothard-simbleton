@@ -3,17 +3,22 @@ body {
     color: azure;
     margin: 0;
     padding: 0;
+    border:rgb(78, 72, 72) dotted .6rem;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h1 {
     text-align: center;
     margin: -.05rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 h3 {
     text-align: center;
     font-size: 1.5rem;
+    background-color: antiquewhite;
+    color:rgb(0, 0, 0);
+    margin: .4rem 2rem;
 }
 
 .header {
@@ -30,6 +35,19 @@ h3 {
 .database {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.businessList--newYork {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.businessList--manufacturing {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 .customer {
@@ -37,7 +55,7 @@ h3 {
     border-radius: 25px;
     border: 2px solid #fabb56;
     padding: 10px;
-    width: 200px;
+    width: 220px;
     height: 120px;
     background-color: antiquewhite;
     color: rgb(78, 72, 72);
@@ -51,4 +69,5 @@ h3 {
 h2{
     text-decoration: underline;
     padding: -1rem;
+    color:black;
 }
