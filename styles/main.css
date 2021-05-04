@@ -1,14 +1,30 @@
 body {
     background-color: brown;
     color: azure;
+    margin: 0;
+    padding: 0;
 }
+
+h1 {
+    text-align: center;
+    margin: -.05rem;
+    font-size: 4rem;
+}
+
+.header {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: antiquewhite;
+    color:rgb(78, 72, 72);
+    border: dotted .2rem rgb(78, 72, 72);
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 25px;
+}
+
 
 .customer {
     border: .1rem dotted antiquewhite;
-    /* border-radius: 4%;
-    padding-left: 3rem;
-    padding-bottom: 1rem;
-    margin: 1rem; */
     border-radius: 25px;
     border: 2px solid #fabb56;
     padding: 10px;
@@ -16,6 +32,7 @@ body {
     height: 120px;
     background-color: antiquewhite;
     color: rgb(78, 72, 72);
+    margin: 2%;
 }
 
 .customer__type {
