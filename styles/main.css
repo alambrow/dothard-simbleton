@@ -1,0 +1,19 @@
+body {
+    background-color: brown;
+    color: azure;
+}
+
+.customer {
+    border: .1rem dotted antiquewhite;
+    border-radius: 4%;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+    margin: 1rem;
+    background-color: antiquewhite;
+    color: rgb(78, 72, 72);
+}
+
+h2{
+    text-decoration: underline;
+    font-size: x-large;
+}
