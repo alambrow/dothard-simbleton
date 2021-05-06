@@ -22,7 +22,7 @@ export const agentsList = () => {
     );
 }
 
-const agentDisplay = (agent) => {
+export const agentDisplay = (agent) => {
     return `
         <section class="customer">
             <h5 class="customer__type">${agent.fullName}</h5>

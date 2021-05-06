@@ -1,6 +1,6 @@
 import { dataDisplay } from "./Business.js"
-import { grabAgentData, grabData } from "./database.js"
-import { agentsList } from "./PurchasingAgents.js"
+import { grabData } from "./database.js"
+import { agentDisplay } from "./PurchasingAgents.js"
 
 const companySearchResults = document.querySelector(".foundCompanies")
 
@@ -32,3 +32,32 @@ export const businessList = () => {
         }
     );
 }
+
+
+// agent search function (just done by full name)
+
+const agentSearchResults = document.querySelector(".foundAgents")
+
+document.querySelector("#agentSearch").addEventListener(
+    "keypress",
+    keyPressEvent => {
+        if (keyPressEvent.charCode === 13) {
+            const dataArray = grabData()
+
+            const agentsList = dataArray.map(elem => (
+                {
+                    fullName: elem.purchasingAgent.nameFirst + " " + elem.purchasingAgent.nameLast,
+                    company: elem.companyName,
+                    phoneNumber: elem.phoneWork
+                }
+            )
+        );
+
+        const enteredText = keyPressEvent.target.value.toLowerCase()
+
+        const foundAgent = agentsList.find(agent => agent.fullName.toLowerCase().includes(enteredText))
+
+        agentSearchResults.innerHTML = agentDisplay(foundAgent)
+        }
+    }
+)
